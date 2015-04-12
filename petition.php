@@ -9,10 +9,22 @@
 session_start(); 
 if (isset($_SESSION['login_user']) == FALSE) {
 	header("location: login.php");
+
 }
 else{
-	$connection = mysql_connect("localhost", "root", "guru") or die("no connection");
-	$db = mysql_select_db("cbit", $connection);
+	
+	include('connection.php');
+
+	if(isset($_GET['value']))
+	{
+		if($_GET['value']=="success")
+			echo "<script> alert('success');</script>";
+		else if($_GET['value']=="fail")
+			echo "<script> alert('fail');</script>";
+	
+		}
+
+
 echo "<div id='create'> 
 	<form id='loginform' name='loginid' method='post' action='cre.php'>
  		<input  name='title' type='text' id='title'>
@@ -27,7 +39,8 @@ echo "<div id='create'>
 		<h1>".$result['title']."</h1>
 		<h1>".$result['text']."</h1>
 		<h1>".$result['count']."</h1>
-		<input  name='count' type='submit' id='count' value='count'>
+		<a href='count.php?ides=".$result['serial_no']."'> count </a>
+		
 		</div>";
 	}
 	
