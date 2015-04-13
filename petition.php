@@ -49,6 +49,7 @@ echo "<div id='create'>
 		echo "<a href='count.php?id=".$petition_no."'> upvote </a>";
 		else if(mysql_num_rows($res)==1)
 		echo	"voted ";		
+		echo "<a href='upvote.php?id=".$petition_no."'> upvoted by </a>";
 		echo "</div>";
 	}
 	
