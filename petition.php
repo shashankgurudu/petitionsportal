@@ -50,6 +50,7 @@ echo "<div id='create'>
 		else if(mysql_num_rows($res)==1)
 		echo	"voted ";		
 		echo "<a href='upvote.php?id=".$petition_no."'> upvoted by </a>";
+		echo "<h1> Created by ".$result['user']."</h1>";
 		echo "</div>";
 	}
 	

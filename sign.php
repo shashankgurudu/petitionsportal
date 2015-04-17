@@ -54,16 +54,19 @@
     </div>
 
     <div class="container">
-    <div class="col-md-6">
- 	<h4> Login here </h4>
- 	<form id="loginform" name="loginid" method="post" action="logverify.php">
- 		Username<input  name="username" type="text" id="username">
- 		Password<input name="password" type="password" id="password">
- 		<input  name="submit" type="submit" id="submit" value="submit">
+    
+
+	<div class="col-md-6">
+ 		<h4>Don't have an account, create one using this form </h4>
+ 		<form id="signupform" name="signupform" method="post" action="signup.php">
+ 		Roll No<input  name="usernamesin" placeholder="Your Roll no" type="text" id="usernamein">
+ 		Name<input  name="namein" placeholder="Rajnikanth" type="text" id="namein">
+ 		Email<input  name="emailin" placeholder="gmail@rajnikanth.com" type="text" id="emailin">
+ 		Password<input name="passwordsin" placeholder="b@$h@ @->b->@" type="password" id="password1">
+ 		Again<input name="passwordsin" placeholder="lakalakalaka" type="password" id="password2">
+ 		<input  name="submit" type="submit" id="submit" onclick="return check()" value="submit">
  	</form>
  	</div>
-
-
  	</div>
 		
 
