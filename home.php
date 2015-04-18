@@ -74,11 +74,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="embvideo">
-<iframe src="https://explee.com/embed/video/mmbd3?" width="640" height="360" 
-frameborder="0" allowfullscreen="" mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel="">
-</iframe>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sTJbo4OflR0" frameborder="0" allowfullscreen></iframe>
 
 <div class="container">
 		
