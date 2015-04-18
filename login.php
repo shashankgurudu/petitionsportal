@@ -117,14 +117,7 @@
 </div>
 		
 
-<div class="bottom">
-    <div class="container">
-        <div class="col-md-12">
-            <h3> Made with <span class="glyphicon glyphicon-heart"></span>  by a folk like you</h3>
-            <p>Shashank Gurudu</p>
-        </div>
-    </div>
-</div>
+
 
  	
 <div class="bottom">
