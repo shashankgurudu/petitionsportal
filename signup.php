@@ -19,10 +19,6 @@
 		echo "Username already exists";
 		echo "<a href='login.php'> Go back </a>";
 	}
-	
 
-	
-
-	
 	
 ?>

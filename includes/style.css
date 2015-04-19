@@ -1,108 +1,40 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-h1, h2, h3, h4 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
+.col-md-12 {
+    background-color: #F8F8F8;
 }
-p {
-    font-family: 'Lato', sans-serif;
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
-html {
-    background-color: #474747;
-}
-.top {
-    background-color: #474747;
-}
-.top .navbar-brand {
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    padding: 0 10px;
-    background-color: #57CE63;
-    color: #FEFEFE;
-    text-decoration: none;
-}
-.top .container {
-    padding: 0;
-}
-.banner {
-    background-color: #373737;
-}
-.banner .container {
-    background-color: #009b9b;
-    min-height: 200px;
-    padding: 40px 30px 30px 40px;
-}
-.banner .container p {
-    font-size: 22px;
-    padding-left: 5px;
-    font-weight: 300;
-}
-.middle {
-    background-color: #CCC;
-}
-.middle .container {
-    background-color: #FFF;
-    min-height: 300px;
-    padding-bottom: 20px;
-}
-.navbar-nav li a {
-    color: #CCC;
-    font-family: 'Lato', sans-serif;
-    margin-left: 55%;
-}
-.navbar-nav li a:hover {
-    background-color: #373737;
-}
-.bottom {
-    background-color: #474747;
-}
-.bottom .container {
-    background-color: #373737;
-    min-height: 150px;
-}
-.bottom .container h3 {
-    color: #999;
-}
-.bottom .container p {
-    color: #666;
-}
-.navbar-toggle {
-    color: #009b9b;
-    font-size: 32px;
-    margin: 3px;
-    padding: 2px 5px;
-    line-height: 32px;
-}
-.navbar-toggle:hover {
-    background-color: #373737;
-}
-.navbar-nav {
-    margin: 0;
-    margin-left: 100;
-}
-
-.content p {
-    line-height: 30px;
-    font-size: 16px;
-}
-.to-tutorial {
-    text-align: center;
-}
+.jumbotron{
+	margin: 5%;
+	padding-left: 5%;
+	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
 }
-.youtube-container { display: block; margin: 20px auto; width: 100%; max-width: 600px; }
-.youtube-player { display: block; width: 100%; /* assuming that the video has a 16:9 ratio */ padding-bottom: 56.25%; overflow: hidden; position: relative; width: 100%; height: 100%; cursor: hand; cursor: pointer; display: block; }
-img.youtube-thumb { bottom: 0; display: block; left: 0; margin: auto; max-width: 100%; width: 100%; position: absolute; right: 0; top: 0; height: auto }
-div.play-button { height: 72px; width: 72px; left: 50%; top: 50%; margin-left: -36px; margin-top: -36px; position: absolute; background: url("http://i.imgur.com/TxzC70f.png") no-repeat; }
-#youtube-iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
 
-.body{
-    background-color: #4FC3F7;
-}
-#head{
-    background-color: #EEEEEE;
+.navbar{
+	margin-bottom: 4%;
 }
 
-.container .col-md-12 .heading{
-    color: #F17646;
+.btn-default{
+	background-color: #B9B9B9;
+}
+
+.author .navbar-right{
+
+    margin-right: 0px;
+  
+}
+
+.embvideo{
+	margin-left: 25%;
 }
