@@ -103,7 +103,7 @@ echo "<div id='create'>
   Upvote <span class='badge'>".$result['count']."</span>
 </button> </a>";
 		else if(mysql_num_rows($res)==1)
-		echo	"<button class='btn btn-default' type='button'> Voted <span class='badge'>".$result['count']."</span></button>";		
+		echo	"<button class='btn btn-default' type='button'> Upvoted <span class='badge'>".$result['count']."</span></button>";		
 		echo "<a href='upvote.php?id=".$petition_no."'>  upvoted by </a>";
 		echo "<p> Created by ".$result['user']."</p>";
 		echo "</div>";
