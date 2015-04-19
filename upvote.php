@@ -18,6 +18,7 @@
 		echo "</div>";
 		
 	}
+	echo "<a href= 'petition.php'> <button class='btn btn-default' type='button'> Back to Petitions </button> </a>"
 
 }
 
