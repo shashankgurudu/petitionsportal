@@ -16,10 +16,8 @@
   <!-- Latest compiled JavaScript -->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="inlineDisqussions.js"></script>
     <link href="includes/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
-    
+
 <body bgcolor="#4FC3F7" >
 
   <nav class="navbar navbar-default  ">
@@ -97,9 +95,12 @@ echo "<div id='create'>
   {
     $petition_no=$result['serial_no'];
     $query1="SELECT * from upvotes where username='$user' and petition_no='$petition_no'";
-    $res=mysql_query($query1);  
+    $query2="SELECT * from downvote where username='$user' and petition_no='$petition_no'";
 
-    echo "<div class='jumbotron' id='text'> 
+    $res=mysql_query($query1);  
+    $res2=mysql_query($query2);  
+    
+    echo "<div class='jumbotron' id='$petition_no'> 
     <h1>".$result['title']."</h1>
     <p>".$result['text']."</p>
     <p> Total Upvotes:".$result['count']."</p>";
@@ -113,30 +114,33 @@ echo "<div id='create'>
     else if(mysql_num_rows($res)==1)
     echo  "<button class='btn btn-default' type='button'> Voted <span class='badge'>".$result['count']."</span></button>";    
     echo "<a href='upvote.php?id=".$petition_no."'>  upvoted by </a>";
+
+    if(mysql_num_rows($res2)==0)
+    echo "<a href='down.php?id=".$petition_no."'>  <button class='btn btn-success' type='button'>
+      Downvote <span class='badge'>".$result['down']."</span>
+    </button> </a>";
+    else if(mysql_num_rows($res)==1)
+    echo  "<button class='btn btn-default' type='button'> DownVoted <span class='badge'>".$result['down']."</span></button>";    
+    echo "<a href='downvote.php?id=".$petition_no."'> Downvoted by</a>";
+
     echo "<h4 style='margin-right:75%' > Created by ".$result['user']."</h4>";
-    ?>
+
+
+?>
     <div class="this-is-single-post-wrapper">
 
-     <a onclick="loadDisqus(jQuery(this), '<?php $petition_no ?> ', 'http://210.212.217.80/<?php $petition_no ?>);">   Show comments    </a>
+     <a onclick="loadDisqus(jQuery(this), '<?php $petition_no ?> ', 'http://210.212.217.80/<?php $petition_no ?>');">
+      Show comments
+     </a>
+</div>
     </div>
 
     
- <?php       
+ <?php   
   }
   
 }
 ?>
-
-</body>
-<div class="bottom">
-    <div class="container">
-        <div class="col-md-12">
-            <h3> Made with <span class="glyphicon glyphicon-heart"></span>  by a folk like you</h3>
-            <p>Shashank Gurudu</p>
-        </div>
-    </div>
-</div>
-
 <script type="text/javascript">
   var disqus_shortname = 'changecbit';
 var disqus_identifier; //made of post id and guid
@@ -184,5 +188,14 @@ if (window.DISQUS) {
     }
 </script>
 
+</body>
+<div class="bottom">
+    <div class="container">
+        <div class="col-md-12">
+            <h3> Made with <span class="glyphicon glyphicon-heart"></span>  by a folk like you</h3>
+            <p>Shashank Gurudu</p>
+        </div>
+    </div>
+</div>
 
 </html>
