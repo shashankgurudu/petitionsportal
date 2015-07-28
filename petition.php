@@ -19,22 +19,7 @@
   <script src="inlineDisqussions.js"></script>
     <link href="includes/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
-    <script>
-
-        disqus_shortname = 'changecbit';
-        jQuery(document).ready(function() {
-        jQuery("h4").inlineDisqussions({
-            identifier: '<?php $petition_no; ?>',
-              displayCount: true,
-  highlighted: false,
-  position: 'right',
-  background: 'white',
-  maxWidth: 7000
-        });
-        });
-
-  </script>
-
+    
 <body bgcolor="#4FC3F7" >
 
   <nav class="navbar navbar-default  ">
@@ -132,16 +117,11 @@ echo "<div id='create'>
     ?>
     <div class="this-is-single-post-wrapper">
 
-     <a onclick="loadDisqus(jQuery(this), '<?php $petition_no ?> ', 'http://210.212.217.80/<?php $petition_no ?>');">
-      Show comments
-     </a>
-</div>
+     <a onclick="loadDisqus(jQuery(this), '<?php $petition_no ?> ', 'http://210.212.217.80/<?php $petition_no ?>);">   Show comments    </a>
+    </div>
 
     
- <?php   
-  }
-
-    
+ <?php       
   }
   
 }
