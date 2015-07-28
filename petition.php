@@ -129,8 +129,17 @@ echo "<div id='create'>
     echo  "<button class='btn btn-default' type='button'> Voted <span class='badge'>".$result['count']."</span></button>";    
     echo "<a href='upvote.php?id=".$petition_no."'>  upvoted by </a>";
     echo "<h4 style='margin-right:75%' > Created by ".$result['user']."</h4>";
-    echo "<div id='but' style='width:10%;height:30px;'>Show comments</div>";
-    echo "</div>";
+    ?>
+    <div class="this-is-single-post-wrapper">
+
+     <a onclick="loadDisqus(jQuery(this), '<?php $petition_no ?> ', 'http://210.212.217.80/<?php $petition_no ?>');">
+      Show comments
+     </a>
+</div>
+
+    
+ <?php   
+  }
 
     
   }
@@ -147,5 +156,53 @@ echo "<div id='create'>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+  var disqus_shortname = 'changecbit';
+var disqus_identifier; //made of post id and guid
+var disqus_url; //post permalink
+
+function loadDisqus(source, identifier, url) {
+  $(document).ready(function(){
+
+if (window.DISQUS) {
+
+   
+    $('#disqus_thread').insertAfter(source); //append the HTML after the link
+
+   //if Disqus exists, call it's reset method with new parameters
+   DISQUS.reset({
+      reload: true,
+      config: function () {
+      this.page.identifier = identifier;
+      this.page.url = url;
+      }
+   });
+
+} else {
+
+   //insert a wrapper in HTML after the relevant "show comments" link
+   jQuery('<div id="disqus_thread" style="display:block"></div>').insertAfter(source);
+   disqus_identifier = identifier; //set the identifier argument
+   disqus_url = url; //set the permalink argument
+
+   //append the Disqus embed script to HTML
+   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+   dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+   jQuery('head').append(dsq);
+
+  }
+  $('#disqus_thread').removeAttr("style");
+
+});}
+</script>
+            
+<script type="text/javascript">
+    function myFunction() {
+      
+      document.getElementById("disqus_thread").style.display = "block";
+    }
+</script>
+
 
 </html>
