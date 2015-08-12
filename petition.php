@@ -181,13 +181,6 @@ if (window.DISQUS) {
 });}
 </script>
             
-<script type="text/javascript">
-    function myFunction() {
-      
-      document.getElementById("disqus_thread").style.display = "block";
-    }
-</script>
-
 </body>
 <div class="bottom">
     <div class="container">
