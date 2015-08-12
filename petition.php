@@ -169,7 +169,7 @@ if (window.DISQUS) {
    jQuery('<div id="disqus_thread" style="display:block"></div>').insertAfter(source);
    disqus_identifier = identifier; //set the identifier argument
    disqus_url = url; //set the permalink argument
-
+    alert(disqus_identifier);
    //append the Disqus embed script to HTML
    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
